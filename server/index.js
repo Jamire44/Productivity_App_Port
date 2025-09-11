@@ -12,6 +12,11 @@ app.get("/ping", (req, res) => {
   res.json({ message: "pong" });
 });
 
+app.get("/", (req, res) => {
+    res.send("Backend is running 🚀");
+  });
+  
+
 // Get all tasks for a user
 app.get("/tasks/:userId", async (req, res) => {
   const { userId } = req.params;
