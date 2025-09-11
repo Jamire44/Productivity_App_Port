@@ -9,10 +9,10 @@ export default function App(){
   useEffect(() => {
     const fetchMessage = async () => {
       try {
-        const res = await fetch(`${import.meta.env.VITE_API_URL}/ping`);
+        const res = await fetch(`${import.meta.env.VITE_API_URL}`);
         if(!res.ok) throw new Error(`Server error: ${res.status}`);
         const data = await res.json();
-        setMessage(data.message);
+        setMessage(data);
       } catch (err) {
         console.error(err);
         setError("Failed to connect to backend");
