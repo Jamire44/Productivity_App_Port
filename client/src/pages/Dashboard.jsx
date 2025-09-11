@@ -16,7 +16,7 @@ export default function Dashboard() {
       // demo mode
       setTasks([
         { id: 1, title: "Example task (not saved)", completed: false },
-        
+        { id: 2, title: "Sign up to save tasks!", completed: false },
       ]);
       return;
     }
