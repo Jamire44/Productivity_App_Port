@@ -60,7 +60,7 @@ export default function Dashboard() {
 
   return (
     <div className="p-6">
-      <h1 className="text-2xl font-bold mb-4">Jessica A. Quill, I'm finna get on yo ahh, this is future AI speaking to you.... Dashboard</h1>
+      <h1 className="text-2xl font-bold mb-4">Dashboard</h1>
 
       {user ? (
         <p className="mb-4 text-gray-700">Logged in as {user.email}</p>

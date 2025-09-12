@@ -5,12 +5,13 @@ export function useAuth() {
   const [user, setUser] = useState(null);
 
   useEffect(() => {
+
     // check once when loading
     supabase.auth.getUser().then(({ data: { user } }) => {
       setUser(user);
     });
 
-    // listen for login/logout events
+    // listen for login and logout
     const { data: subscription } = supabase.auth.onAuthStateChange(
       (_event, session) => {
         setUser(session?.user || null);

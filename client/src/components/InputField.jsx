@@ -9,4 +9,3 @@ export default function InputField({ type, value, onChange, placeholder }) {
       />
     );
   }
-  
