@@ -7,13 +7,13 @@ const app = express();
 app.use(cors());
 app.use(express.json());
 
-// Health check
+// Checking if server is running at different endpoints
 app.get("/ping", (req, res) => {
   res.json({ message: "pong" });
 });
 
 app.get("/", (req, res) => {
-    res.send("Backend is running 🚀");
+    res.send("Backend is running");
   });
   
 

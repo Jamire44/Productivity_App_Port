@@ -15,8 +15,7 @@ export default function Signup() {
     if (error) {
       setMessage(error.message);
     } else {
-      setMessage("📩 Check your email for a confirmation link");
-      // optionally auto-navigate to login page after a delay
+      setMessage("Check your email for a confirmation link");
       setTimeout(() => navigate("/login"), 2000);
     }
   };
