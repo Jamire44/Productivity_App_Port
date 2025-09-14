@@ -18,7 +18,7 @@ export default function Login() {
     if (error) {
       setMessage(error.message);
     } else {
-      setMessage("✅ Logged in!");
+      setMessage("Logged in!");
       navigate("/dashboard");
     }
   };
@@ -28,7 +28,7 @@ export default function Login() {
       <h1 className="text-2xl font-bold">Log In</h1>
       <InputField type="email" value={email} onChange={setEmail} placeholder="Email" />
       <InputField type="password" value={password} onChange={setPassword} placeholder="Password" />
-      <Button text="Log In" onClick={handleLogin} color="blue" />
+      <Button text="Log In" onClick={handleLogin} />
       <p className="mt-2 text-sm">
         Don’t have an account?{" "}
         <Link to="/signup" className="text-green-600 underline">Sign up</Link>

@@ -25,7 +25,7 @@ export default function Signup() {
       <h1 className="text-2xl font-bold">Sign Up</h1>
       <InputField type="email" value={email} onChange={setEmail} placeholder="Email" />
       <InputField type="password" value={password} onChange={setPassword} placeholder="Password" />
-      <Button text="Sign Up" onClick={handleSignup} color="green" />
+      <Button text="Sign Up" onClick={handleSignup}/>
       <p className="mt-2 text-sm">
         Already have an account?{" "}
         <Link to="/login" className="text-blue-600 underline">Log in</Link>

@@ -1,15 +1,15 @@
-export default function Button({ text, onClick, color }) {
-    const base = "px-4 py-2 rounded text-white";
-    const colors = {
-      blue: "bg-blue-500 hover:bg-blue-600",
-      green: "bg-green-500 hover:bg-green-600",
-      red: "bg-red-500 hover:bg-red-600",
-    };
-  
-    return (
-      <button onClick={onClick} className={`${base} ${colors[color] || "bg-gray-500"}`}>
-        {text}
-      </button>
-    );
-  }
-  
+export default function Button({ text, onClick, variant = "primary" }) {
+  const base = "px-4 py-2 rounded-lg font-semibold transition";
+
+  const styles = {
+    primary: "bg-blue-600 text-white hover:bg-blue-500",
+    secondary: "bg-neutral-600 text-gray-100 hover:bg-neutral-500",
+    danger: "bg-red-600 text-white hover:bg-red-500", 
+  };
+
+  return (
+    <button onClick={onClick} className={`${base} ${styles[variant]}`}>
+      {text}
+    </button>
+  );
+}

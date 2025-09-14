@@ -5,7 +5,7 @@ export default function InputField({ type, value, onChange, placeholder }) {
         value={value}
         onChange={(e) => onChange(e.target.value)}
         placeholder={placeholder}
-        className="border p-2 rounded w-64"
+        className="border p-2 rounded w-128 text-green-900"
       />
     );
   }
