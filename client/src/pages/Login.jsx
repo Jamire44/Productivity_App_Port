@@ -28,6 +28,10 @@ export default function Login() {
       <h1 className="text-2xl font-bold">Log In</h1>
       <InputField type="email" value={email} onChange={setEmail} placeholder="Email" />
       <InputField type="password" value={password} onChange={setPassword} placeholder="Password" />
+      <Link to="/forgot-password" className="text-blue-400 text-sm underline">
+        Forgot password?
+      </Link>
+
       <Button text="Log In" onClick={handleLogin} />
       <p className="mt-2 text-sm">
         Don’t have an account?{" "}

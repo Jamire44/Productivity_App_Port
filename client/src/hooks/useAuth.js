@@ -3,22 +3,33 @@ import supabase from "../supabase";
 
 export function useAuth() {
   const [user, setUser] = useState(null);
+  const [userLoading, setUserLoading] = useState(true);
 
   useEffect(() => {
-    // check once when loading
-    supabase.auth.getUser().then(({ data: { user } }) => {
-      setUser(user);
+    // Check session once on load
+    supabase.auth.getSession().then(({ data }) => {
+      setUser(data.session?.user ?? null);
+      setUserLoading(false);
     });
 
-    // listen for login/logout
-    const { data: subscription } = supabase.auth.onAuthStateChange(
+    // Listening for login/logout or/and session changes
+    const { data: { subscription } } = supabase.auth.onAuthStateChange(
       (_event, session) => {
         setUser(session?.user || null);
+        setUserLoading(false);
       }
     );
 
-    return () => subscription.subscription.unsubscribe();
+    return () => {
+      subscription.unsubscribe();
+    };
   }, []);
 
-  return user;
+  const logout = async () => {
+    await supabase.auth.signOut();
+    setUser(null);       
+    setUserLoading(false);
+  };
+
+  return { user, userLoading, logout };
 }
