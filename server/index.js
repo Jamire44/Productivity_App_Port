@@ -6,7 +6,12 @@ import jwt from "jsonwebtoken";
 import { createClient } from "@supabase/supabase-js";
 
 const app = express();
-app.use(cors({ methods: ["GET", "POST", "PUT", "DELETE"] }));
+app.use(cors({
+  origin: "*",
+  methods: ["GET", "POST", "PUT", "DELETE"],
+  allowedHeaders: ["Content-Type", "Authorization"]
+}));
+
 app.use(express.json());
 
 const supabaseAdmin = createClient(
@@ -66,7 +71,7 @@ app.post("/tasks", authenticateToken, async (req, res) => {
   }
 });
 
-// Toggle completion
+// Toggle to complete
 app.put("/tasks/:id/toggle", authenticateToken, async (req, res) => {
   const { id } = req.params;
   const userId = req.user.sub;

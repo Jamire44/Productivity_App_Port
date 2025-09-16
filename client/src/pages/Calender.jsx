@@ -104,7 +104,7 @@ export default function Calendar() {
               <div>
                 <h3 className="text-lg font-semibold text-blue-300">{event.title}</h3>
                 <p className="text-gray-400">{event.description}</p>
-                <p className="text-gray-500 text-sm">📅 {event.event_date}</p>
+                <p className="text-gray-500 text-sm">{event.event_date} 📅</p>
               </div>
               <Button
                 text="Delete"

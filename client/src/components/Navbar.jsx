@@ -38,7 +38,7 @@ export default function Navbar() {
   
   return (
     <nav className="relative bg-neutral-800 px-6 py-3 shadow flex items-center">
-      {/* Left: Logo + name */}
+      {/* Left: Logo and name */}
       <div className="flex items-center">
         <Link to="/dashboard" className="flex items-center gap-2">
           <Logo style={{ width: 32, height: 32 }} />

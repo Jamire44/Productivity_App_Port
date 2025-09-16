@@ -46,7 +46,7 @@ export default function Dashboard() {
             to="/tasks"
             className="p-6 bg-neutral-800 rounded-2xl shadow hover:shadow-xl hover:bg-neutral-700 transition block"
           >
-            <h3 className="text-lg font-semibold text-blue-400">✅ Tasks</h3>
+            <h3 className="text-lg font-semibold text-blue-400">Tasks ✅</h3>
             <p className="text-sm text-gray-400">
               Organize your tasks and stay productive.
             </p>
@@ -56,7 +56,7 @@ export default function Dashboard() {
             to="/notes"
             className="p-6 bg-neutral-800 rounded-2xl shadow hover:shadow-xl hover:bg-neutral-700 transition block"
           >
-            <h3 className="text-lg font-semibold text-blue-400">📝 Notes</h3>
+            <h3 className="text-lg font-semibold text-blue-400">Notes 📝</h3>
             <p className="text-sm text-gray-400">
               Write and manage your notes in one place.
             </p>
@@ -66,7 +66,7 @@ export default function Dashboard() {
             to="/calendar"
             className="p-6 bg-neutral-800 rounded-2xl shadow hover:shadow-xl hover:bg-neutral-700 transition block"
           >
-            <h3 className="text-lg font-semibold text-blue-400">📅 Calendar</h3>
+            <h3 className="text-lg font-semibold text-blue-400">Calendar 📅</h3>
             <p className="text-sm text-gray-400">
               Plan your days with a built-in calendar.
             </p>
@@ -76,7 +76,7 @@ export default function Dashboard() {
             to="/analytics"
             className="p-6 bg-neutral-800 rounded-2xl shadow hover:shadow-xl hover:bg-neutral-700 transition block"
           >
-            <h3 className="text-lg font-semibold text-blue-400">📊 Analytics</h3>
+            <h3 className="text-lg font-semibold text-blue-400">Analytics 📊</h3>
             <p className="text-sm text-gray-400">
               Track your productivity over time.
             </p>
